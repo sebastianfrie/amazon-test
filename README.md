@@ -54,19 +54,37 @@ Amazon-Test/
 
 Installation
 ------------
-Install all dependencies:
-npm install
+Download and Install VS Code on your system https://code.visualstudio.com/
+Download and Install Node.js on your System https://nodejs.org/en
 
-Install Playwright browsers:
-npx playwright install --with-deps
+1 Clone repository
+Click on "Clone Git Repository" and enter the following adress: https://github.com/sebastianfrie/amazon-test.git
+
+2 Open the cloned repository in VS Code
+Click on "Open" and choose the cloned repository "amazon-test"
+
+3 Open VS Code terminal
+Menu View->Terminal
+
+3 Install all dependencies
+Perform VS Terminal command: npm install 
+	
+4 Install Playwright browsers:
+Perform VS Terminal command: npx playwright install --with-deps
+
+After installation is done, continue with the steps below "How to Run Tests"
 
 ------------------------------------------------------------
 
 How to Run Tests
 ----------------
-Execute the full test suite and generate a report:
+Execute the full test suite and generate and open a report:
 
-npm run amazon-tests:report
+1 Run Tests
+Perform VS Terminal command: npm run amazon-tests:report
+
+2 After finished test run, open the report
+Perform VS Terminal command: open reports/html/index.html
 
 ------------------------------------------------------------
 
@@ -84,6 +102,9 @@ The reports include:
 - Test execution results
 - Step-by-step execution details
 - Failure analysis information
+
+Open the html report by using the following command
+open reports/html/index.html
 
 ------------------------------------------------------------
 
