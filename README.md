@@ -12,15 +12,20 @@ The main goal is to demonstrate scalable, maintainable, and cross-platform UI te
 
 ------------------------------------------------------------
 
-Test Scenario
+Test Scenarios
 -------------
-The automated test covers the following business scenario:
+The automated test suite covers two business scenarios for a new Amazon user:
 
-As a new Amazon user, the test performs the following steps:
-- Search for the cheapest Snickers and Skittles products
-- Add the cheapest items to the basket
-- Validate that the basket total is calculated correctly
-- Proceed to checkout and verify that without an account the user is redirected to the registration page
+Scenario 1: Basket Total Calculation
+  Search for the cheapest Snickers and Skittles products
+  Add the cheapest items to the basket
+  Validate that the basket total is calculated correctly
+
+Scenario 2: Checkout Redirection
+  Search for the cheapest Snickers and Skittles products
+  Add the cheapest items to the basket
+  Proceed to checkout without being logged in
+  Verify that the user is redirected to the registration/sign-in page
 
 ------------------------------------------------------------
 
@@ -34,21 +39,14 @@ Tech Stack
 
 ------------------------------------------------------------
 
-Project Structure
+Sources
 -----------------
 Amazon-Test/
-- reports/
-  - json/
-  - html/
-
 - src/
   - features/          (Gherkin feature files)
   - pages/             (Page Object Models)
   - step-definitions/  (Cucumber step implementations)
   - support/           (Hooks, setup, utilities)
-
-- package.json
-- tsconfig.json
 
 ------------------------------------------------------------
 
@@ -103,26 +101,7 @@ The reports include:
 - Step-by-step execution details
 - Failure analysis information
 
-Open the html report by using the following command
-open reports/html/index.html
-
-------------------------------------------------------------
-
-Design Principles
-------------------
-This framework follows modern test automation principles:
-
-Page Object Model (POM):
-UI selectors and actions are centralized in page classes to improve maintainability and reusability.
-
-DRY Principle:
-Reusable methods and steps are implemented to avoid duplication.
-
-BDD Approach:
-Tests are written in Gherkin language to ensure readability for both technical and non-technical stakeholders.
-
-Scalability:
-The structure supports easy extension for additional test scenarios and user flows.
+Open the html report by using the following command: open reports/html/index.html
 
 ------------------------------------------------------------
 
@@ -135,14 +114,6 @@ The project is designed to run on:
 - Linux
 
 Chrome-based execution is handled via Playwright’s browser abstraction layer.
-
-------------------------------------------------------------
-
-Notes for Reviewers
---------------------
-- The framework is designed for extensibility and real-world test automation use cases
-- Focus is placed on maintainability, readability, and scalability
-- The test suite is modular and can easily be extended with additional scenarios
 
 ------------------------------------------------------------
 
