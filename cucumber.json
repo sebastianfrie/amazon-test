@@ -1,0 +1,10 @@
+{
+    "default":{
+        "paths":["src/**/*.feature"],
+        "require":["src/**/*.ts"],
+        "format": [
+            "progress",
+            "json:reports/json/cucumber_report.json"
+        ]
+    }
+}
