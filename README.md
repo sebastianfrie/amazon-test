@@ -1,16 +1,24 @@
 # amazon-test
-Amazon Test Automation Project
+Amazon Test Automation Challenge
 ===============================
 
-Overview
---------
-This project is a web test automation framework built to validate key user flows on an Amazon-like e-commerce page.
+Task
+-------------
+Set Up a Web Testing Project for Chrome that executes the following Test Case.
 
-It is implemented using Playwright, Cucumber (BDD), and Node.js (NodeNext module system).
+As a new Amazon user, I want to search for the cheapest Snickers and Skittles on the page. Add the cheapest ones to your Basket and check if the basket calculates the result correctly. Check if on Checkout, without an account, the user gets redirected to the registration page.
+Additional conditions:
+-	Document your project so a customer can use it without a personal ramp-up. (Readme.md)
+-	To formulate the Test Case, please use a descriptive Language that can be exported for automated Test Reporting. (preferred: “Cucumber”)
+-	Please write the Test as generic as possible to expand the Testsuite using the DRY-Principle.
+-	Multiple OS Drivers should be included (Windows, Linux MacOS)
 
-The main goal is to demonstrate scalable, maintainable, and cross-platform UI test automation following best practices such as DRY principles and Page Object Model (POM).
+-	Time Limit: 3 Days
 
 ------------------------------------------------------------
+
+Solution
+-------------
 
 Test Scenarios
 -------------
@@ -27,20 +35,16 @@ Scenario 2: Checkout Redirection
   Proceed to checkout without being logged in
   Verify that the user is redirected to the registration/sign-in page
 
-------------------------------------------------------------
-
 Tech Stack
-----------
+-------------
 - Playwright (browser automation)
 - Cucumber (BDD / Gherkin syntax)
 - Node.js (NodeNext module system)
 - TypeScript
 - Cross-platform execution support (Windows, macOS, Linux via Chrome driver abstraction)
 
-------------------------------------------------------------
-
 Sources
------------------
+-------------
 Amazon-Test/
 - src/
   - features/          (Gherkin feature files)
@@ -48,46 +52,50 @@ Amazon-Test/
   - step-definitions/  (Cucumber step implementations)
   - support/           (Hooks, setup, utilities)
 
-------------------------------------------------------------
-
 Installation
-------------
+-------------
 Download and Install VS Code on your system https://code.visualstudio.com/
 Download and Install Node.js on your System https://nodejs.org/en
 
-1 Clone repository
+1 Clone repository  
 Click on "Clone Git Repository" and enter the following adress: https://github.com/sebastianfrie/amazon-test.git
 
-2 Open the cloned repository in VS Code
+2 Open the cloned repository in VS Code  
 Click on "Open" and choose the cloned repository "amazon-test"
 
-3 Open VS Code terminal
+3 Open VS Code terminal  
 Menu View->Terminal
 
-3 Install all dependencies
-Perform VS Terminal command: npm install 
-	
-4 Install Playwright browsers:
-Perform VS Terminal command: npx playwright install --with-deps
-
+3 Install all dependencies  
+Perform VS Terminal command:  
+```bash
+ npm install 
+```
+4 Install Playwright browsers:  
+Perform VS Terminal command:  
+```bash
+npx playwright install --with-deps
+```
 After installation is done, continue with the steps below "How to Run Tests"
 
-------------------------------------------------------------
 
 How to Run Tests
-----------------
+-------------
 Execute the full test suite and generate and open a report:
 
-1 Run Tests
-Perform VS Terminal command: npm run amazon-tests:report
-
-2 After finished test run, open the report
-Perform VS Terminal command: open reports/html/index.html
-
-------------------------------------------------------------
+1 Run Tests  
+Perform VS Terminal command:  
+```bash
+npm run amazon-tests:report
+```
+2 After finished test run, open the report  
+Perform VS Terminal command:  
+```bash
+open reports/html/index.html
+```
 
 Reporting
----------
+-------------
 After execution, reports are generated in the following locations:
 
 JSON Report:
@@ -101,12 +109,13 @@ The reports include:
 - Step-by-step execution details
 - Failure analysis information
 
-Open the html report by using the following command: open reports/html/index.html
-
-------------------------------------------------------------
+Open the html report by using the following command:  
+```bash
+open reports/html/index.html
+```
 
 Cross-Platform Support
-----------------------
+-------------
 The project is designed to run on:
 
 - Windows
@@ -115,10 +124,9 @@ The project is designed to run on:
 
 Chrome-based execution is handled via Playwright’s browser abstraction layer.
 
-------------------------------------------------------------
-
 Execution Command Summary
-------------------------
-Run full test suite with report:
-
+-------------
+Run full test suite with report:  
+```bash
 npm run amazon-tests:report
+```
