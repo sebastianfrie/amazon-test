@@ -1,8 +1,7 @@
-# amazon-test
-Amazon Test Automation Challenge
-===============================
+# Amazon Test Automation Challenge
+------------------------------------------------------------
 
-Task
+## Task
 -------------
 Set Up a Web Testing Project for Chrome that executes the following Test Case.
 
@@ -17,10 +16,10 @@ Additional conditions:
 
 ------------------------------------------------------------
 
-Solution
+## Solution
 -------------
 
-Test Scenarios
+# Test Scenarios
 -------------
 The automated test suite covers two business scenarios for a new Amazon user:
 
@@ -35,7 +34,7 @@ Scenario 2: Checkout Redirection
   Proceed to checkout without being logged in
   Verify that the user is redirected to the registration/sign-in page
 
-Tech Stack
+# Tech Stack
 -------------
 - Playwright (browser automation)
 - Cucumber (BDD / Gherkin syntax)
@@ -43,7 +42,7 @@ Tech Stack
 - TypeScript
 - Cross-platform execution support (Windows, macOS, Linux via Chrome driver abstraction)
 
-Sources
+# Sources
 -------------
 Amazon-Test/
 - src/
@@ -52,7 +51,7 @@ Amazon-Test/
   - step-definitions/  (Cucumber step implementations)
   - support/           (Hooks, setup, utilities)
 
-Installation
+# Installation
 -------------
 Download and Install VS Code on your system https://code.visualstudio.com/
 Download and Install Node.js on your System https://nodejs.org/en
@@ -77,7 +76,7 @@ npx playwright install --with-deps
 After installation is done, continue with the steps below "How to Run Tests"
 
 
-How to Run Tests
+# How to Run Tests
 -------------
 Execute the full test suite and generate and open a report:
 
@@ -90,7 +89,7 @@ npm run amazon-tests:report
 open reports/html/index.html
 ```
 
-Reporting
+# Reporting
 -------------
 After execution, reports are generated in the following locations:
 
@@ -110,7 +109,7 @@ Open the html report by using the following command:
 open reports/html/index.html
 ```
 
-Cross-Platform Support
+# Cross-Platform Support
 -------------
 The project is designed to run on:
 
@@ -119,10 +118,3 @@ The project is designed to run on:
 - Linux
 
 Chrome-based execution is handled via Playwright’s browser abstraction layer.
-
-Execution Command Summary
--------------
-Run full test suite with report:  
-```bash
-npm run amazon-tests:report
-```
