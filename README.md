@@ -29,6 +29,7 @@ Scenario 2: Checkout Redirection
   Proceed to checkout without being logged in
   Verify that the user is redirected to the registration/sign-in page
 
+
 ### Tech Stack
 - Playwright (browser automation)
 - Cucumber (BDD / Gherkin syntax)
@@ -36,15 +37,17 @@ Scenario 2: Checkout Redirection
 - TypeScript
 - Cross-platform execution support (Windows, macOS, Linux via Chrome driver abstraction)
 
-### Sources
-Amazon-Test/
-- src/
-  - features/          (Gherkin feature files)
-  - pages/             (Page Object Models)
-  - step-definitions/  (Cucumber step implementations)
-  - support/           (Hooks, setup, utilities)
 
-#### Installation
+### Sources
+- Amazon-Test/
+  - src/
+    - features/          (Gherkin feature files)
+    - pages/             (Page Object Models)
+    - step-definitions/  (Cucumber step implementations)
+    - support/           (Hooks, setup, utilities)
+
+
+### Installation
 Download and Install VS Code on your system https://code.visualstudio.com/
 Download and Install Node.js on your System https://nodejs.org/en
 
@@ -68,7 +71,7 @@ npx playwright install --with-deps
 After installation is done, continue with the steps below "How to Run Tests"
 
 
-#### How to Run Tests
+### How to Run Tests
 Execute the full test suite and generate and open a report:
 
 1 Run Tests  
@@ -79,6 +82,7 @@ npm run amazon-tests:report
 ```bash
 open reports/html/index.html
 ```
+
 
 ### Reporting
 After execution, reports are generated in the following locations:
@@ -98,6 +102,7 @@ Open the html report by using the following command:
 ```bash
 open reports/html/index.html
 ```
+
 
 ### Cross-Platform Support
 The project is designed to run on:
