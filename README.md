@@ -51,37 +51,35 @@ Scenario 2: Checkout Redirection
 Download and Install VS Code on your system https://code.visualstudio.com/
 Download and Install Node.js on your System https://nodejs.org/en
 
-1 Clone repository  
-Click on "Clone Git Repository" and enter the following adress: https://github.com/sebastianfrie/amazon-test.git
+1. Clone repository  
+  Click on "Clone Git Repository" and enter the following adress: https://github.com/sebastianfrie/amazon-test.git
+2. Open the cloned repository in VS Code  
+  Click on "Open" and choose the cloned repository "amazon-test"
+3. Open VS Code terminal  
+  Menu View->Terminal
+4. Install all dependencies   
+  ```bash
+  npm install 
+  ```
+5. Install Playwright browsers:  
+  ```bash
+  npx playwright install --with-deps
+  ```
 
-2 Open the cloned repository in VS Code  
-Click on "Open" and choose the cloned repository "amazon-test"
-
-3 Open VS Code terminal  
-Menu View->Terminal
-
-3 Install all dependencies   
-```bash
- npm install 
-```
-4 Install Playwright browsers:  
-```bash
-npx playwright install --with-deps
-```
 After installation is done, continue with the steps below "How to Run Tests"
 
 
 ### How to Run Tests
 Execute the full test suite and generate and open a report:
 
-1 Run Tests  
-```bash
-npm run amazon-tests:report
-```
-2 After finished test run, open the report  
-```bash
-open reports/html/index.html
-```
+1. Run Tests  
+  ```bash
+  npm run amazon-tests:report
+  ```
+2. After finished test run, open the report  
+  ```bash
+  open reports/html/index.html
+  ```
 
 
 ### Reporting
