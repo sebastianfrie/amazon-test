@@ -1,7 +1,6 @@
 # Amazon Test Automation Challenge
 
 ## Task
--------------
 Set Up a Web Testing Project for Chrome that executes the following Test Case.
 
 As a new Amazon user, I want to search for the cheapest Snickers and Skittles on the page. Add the cheapest ones to your Basket and check if the basket calculates the result correctly. Check if on Checkout, without an account, the user gets redirected to the registration page.
@@ -15,10 +14,8 @@ Additional conditions:
 
 
 ## Solution
--------------
 
-# Test Scenarios
--------------
+### Test Scenarios
 The automated test suite covers two business scenarios for a new Amazon user:
 
 Scenario 1: Basket Total Calculation
@@ -32,16 +29,14 @@ Scenario 2: Checkout Redirection
   Proceed to checkout without being logged in
   Verify that the user is redirected to the registration/sign-in page
 
-# Tech Stack
--------------
+### Tech Stack
 - Playwright (browser automation)
 - Cucumber (BDD / Gherkin syntax)
 - Node.js (NodeNext module system)
 - TypeScript
 - Cross-platform execution support (Windows, macOS, Linux via Chrome driver abstraction)
 
-# Sources
--------------
+### Sources
 Amazon-Test/
 - src/
   - features/          (Gherkin feature files)
@@ -49,8 +44,7 @@ Amazon-Test/
   - step-definitions/  (Cucumber step implementations)
   - support/           (Hooks, setup, utilities)
 
-# Installation
--------------
+#### Installation
 Download and Install VS Code on your system https://code.visualstudio.com/
 Download and Install Node.js on your System https://nodejs.org/en
 
@@ -74,8 +68,7 @@ npx playwright install --with-deps
 After installation is done, continue with the steps below "How to Run Tests"
 
 
-# How to Run Tests
--------------
+#### How to Run Tests
 Execute the full test suite and generate and open a report:
 
 1 Run Tests  
@@ -87,8 +80,7 @@ npm run amazon-tests:report
 open reports/html/index.html
 ```
 
-# Reporting
--------------
+### Reporting
 After execution, reports are generated in the following locations:
 
 JSON Report:
@@ -107,8 +99,7 @@ Open the html report by using the following command:
 open reports/html/index.html
 ```
 
-# Cross-Platform Support
--------------
+### Cross-Platform Support
 The project is designed to run on:
 
 - Windows
