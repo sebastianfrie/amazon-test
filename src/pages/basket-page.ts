@@ -21,7 +21,7 @@ export class BasketPage {
     // get price of item, needs to be normalized before comparison with total price from basket
     async getItemPrice(item: Locator) : Promise<number> {                               
         let itemPriceText = "";
-        let itemPriceNumber = 0;
+        let itemPriceNumber = -1;
 
         if(await item.locator('.sc-product-price').count() > 0){                                    // if price element is available
             itemPriceText = (await item.locator('.sc-product-price').allTextContents())[0] ?? '';   // get price information
@@ -35,7 +35,7 @@ export class BasketPage {
     // get total price of basket
     async getTotalPrice() : Promise<number>{
         let totalPriceText = "";
-        let totalPriceNumber = 0;
+        let totalPriceNumber = -1;
         
         if(await this.page.locator('.sc-subtotal-amount-activecart').count() > 0 ) {                            // if total price element is available
             totalPriceText = await this.page.locator('.sc-subtotal-amount-activecart').textContent() ?? '';     // get total price information

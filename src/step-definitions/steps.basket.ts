@@ -12,24 +12,33 @@ Then('the basket total equals the sum of product prices in the basket', async fu
 
     const items = await this.basketPage.getBasketItemsLoc();
 
-    let itemPrice = 0;                                          // price of current item in loop
+    let itemPrice = -1;                                         // price of current item in loop
     let manualSum = 0;                                          // manual calculation of total price
-    let basketSum = 0;                                          // total price from basket
+    let basketSum = -1;                                         // total price from basket
     
     // sum the prices of all basket items manually
     for (const item of items) {
         
         itemPrice = await this.basketPage.getItemPrice(item);                                                                 
 
-        if(itemPrice){  
+        if(itemPrice != -1){  
                 manualSum += itemPrice;
+        }
+        else
+        {
+            throw new Error(`Price extraction of item failed.`);  
         }
     }
   
     basketSum = await this.basketPage.getTotalPrice();          // get basket sum from page
 
-    if(manualSum != 0 && basketSum != 0) {  
+    if(basketSum != -1)
+    {
         expect(basketSum).toBe(manualSum);                      // compare manual calculation with total price from basket
+    }
+    else
+    {
+        throw new Error(`Price extraction of item failed.`); 
     }
 });
 
